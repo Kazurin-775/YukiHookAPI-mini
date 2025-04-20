@@ -43,8 +43,6 @@ dependencies {
     compileOnly(projects.yukihookapiStub)
     implementation(com.github.tiann.freeReflection)
     implementation(androidx.core.core.ktx)
-    implementation(androidx.appcompat.appcompat)
-    implementation(androidx.preference.preference.ktx)
 }
 
 mavenPublishing {

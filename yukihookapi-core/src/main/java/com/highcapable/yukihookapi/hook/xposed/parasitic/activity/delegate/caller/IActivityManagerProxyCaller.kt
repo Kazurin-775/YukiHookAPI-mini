@@ -34,7 +34,6 @@ import com.highcapable.yukihookapi.hook.factory.hasClass
 import com.highcapable.yukihookapi.hook.factory.toClassOrNull
 import com.highcapable.yukihookapi.hook.xposed.parasitic.AppParasitics
 import com.highcapable.yukihookapi.hook.xposed.parasitic.activity.base.ModuleAppActivity
-import com.highcapable.yukihookapi.hook.xposed.parasitic.activity.base.ModuleAppCompatActivity
 import com.highcapable.yukihookapi.hook.xposed.parasitic.activity.config.ActivityProxyConfig
 import java.lang.reflect.InvocationHandler
 import java.lang.reflect.Method
@@ -77,7 +76,7 @@ internal object IActivityManagerProxyCaller {
                 setClassName(component.packageName, component.className.toClassOrNull()?.runCatching {
                     when {
                         this extends classOf<ModuleAppActivity>() -> buildOf<ModuleAppActivity>()?.proxyClassName?.verify()
-                        this extends classOf<ModuleAppCompatActivity>() -> buildOf<ModuleAppCompatActivity>()?.proxyClassName?.verify()
+                        // this extends classOf<ModuleAppCompatActivity>() -> buildOf<ModuleAppCompatActivity>()?.proxyClassName?.verify()
                         else -> null
                     }
                 }?.getOrNull() ?: ActivityProxyConfig.proxyClassName)

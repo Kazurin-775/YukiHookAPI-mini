@@ -41,7 +41,6 @@ import com.highcapable.yukihookapi.hook.param.PackageParam
 import com.highcapable.yukihookapi.hook.xposed.channel.YukiHookDataChannel
 import com.highcapable.yukihookapi.hook.xposed.parasitic.AppParasitics
 import com.highcapable.yukihookapi.hook.xposed.parasitic.activity.base.ModuleAppActivity
-import com.highcapable.yukihookapi.hook.xposed.parasitic.activity.base.ModuleAppCompatActivity
 import com.highcapable.yukihookapi.hook.xposed.parasitic.context.wrapper.ModuleContextThemeWrapper
 import com.highcapable.yukihookapi.hook.xposed.prefs.YukiHookPrefsBridge
 import com.highcapable.yukihookapi.hook.xposed.proxy.IYukiHookXposedInit
