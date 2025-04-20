@@ -41,7 +41,6 @@ android {
 dependencies {
     compileOnly(de.robv.android.xposed.api)
     compileOnly(projects.yukihookapiStub)
-    implementation(com.github.tiann.freeReflection)
     implementation(androidx.core.core.ktx)
 }
 
