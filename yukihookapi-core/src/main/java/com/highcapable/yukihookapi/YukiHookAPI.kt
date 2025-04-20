@@ -31,7 +31,6 @@ import com.highcapable.yukihookapi.YukiHookAPI.Configs.debugLog
 import com.highcapable.yukihookapi.YukiHookAPI.configs
 import com.highcapable.yukihookapi.YukiHookAPI.encase
 import com.highcapable.yukihookapi.annotation.xposed.InjectYukiHookWithXposed
-import com.highcapable.yukihookapi.generated.YukiHookAPIProperties
 import com.highcapable.yukihookapi.hook.core.api.compat.HookApiCategoryHelper
 import com.highcapable.yukihookapi.hook.core.api.compat.HookApiProperty
 import com.highcapable.yukihookapi.hook.core.api.compat.type.ExecutorType
@@ -67,10 +66,10 @@ object YukiHookAPI {
     internal var isLoadedFromBaseContext = false
 
     /** 标签名称 */
-    const val TAG = YukiHookAPIProperties.PROJECT_NAME
+    const val TAG = "YukiHookAPI"
 
     /** 当前版本 */
-    const val VERSION = YukiHookAPIProperties.PROJECT_YUKIHOOKAPI_CORE_VERSION
+    const val VERSION = "1.2.1-mini"
 
     /**
      * 版本名称
