@@ -26,22 +26,23 @@ package com.highcapable.yukihookapi.demo_module.ui
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.highcapable.yukihookapi.YukiHookAPI
 import com.highcapable.yukihookapi.demo_module.R
 import com.highcapable.yukihookapi.demo_module.data.DataConst
 import com.highcapable.yukihookapi.demo_module.databinding.ActivityMainBinding
 import com.highcapable.yukihookapi.hook.factory.dataChannel
 import com.highcapable.yukihookapi.hook.factory.prefs
-import com.highcapable.yukihookapi.hook.xposed.parasitic.activity.base.ModuleAppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class MainActivity : ModuleAppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
-    override val moduleTheme get() = R.style.Theme_Default
+    private val moduleTheme get() = R.style.Theme_Default
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(moduleTheme)
         ActivityMainBinding.inflate(layoutInflater).apply {
             setContentView(root)
             moduleEnvironment {

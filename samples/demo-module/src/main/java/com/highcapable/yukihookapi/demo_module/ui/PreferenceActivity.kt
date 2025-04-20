@@ -22,18 +22,19 @@
 package com.highcapable.yukihookapi.demo_module.ui
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import com.highcapable.yukihookapi.YukiHookAPI
 import com.highcapable.yukihookapi.demo_module.R
-import com.highcapable.yukihookapi.hook.xposed.parasitic.activity.base.ModuleAppCompatActivity
-import com.highcapable.yukihookapi.hook.xposed.prefs.ui.ModulePreferenceFragment
 
-class PreferenceActivity : ModuleAppCompatActivity() {
+class PreferenceActivity : AppCompatActivity() {
 
-    override val moduleTheme get() = R.style.Theme_Default
+    private val moduleTheme get() = R.style.Theme_Default
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(moduleTheme)
         title = "PreferenceFragment"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         if (savedInstanceState == null)
@@ -48,9 +49,9 @@ class PreferenceActivity : ModuleAppCompatActivity() {
         return true
     }
 
-    class SettingsFragment : ModulePreferenceFragment() {
+    class SettingsFragment : PreferenceFragmentCompat() {
 
-        override fun onCreatePreferencesInModuleApp(savedInstanceState: Bundle?, rootKey: String?) {
+        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.settings_preferences, rootKey)
             findPreference<SwitchPreference>("show_dialog_when_demo_app_opend")?.isEnabled = YukiHookAPI.Status.isXposedEnvironment.not()
         }
