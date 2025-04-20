@@ -34,7 +34,7 @@ plugins:
     version-ref: android-application
   com.vanniktech.maven.publish:
     alias: maven-publish
-    version: 0.28.0
+    version: 0.31.0
 
 libraries:
   de.robv.android.xposed:
