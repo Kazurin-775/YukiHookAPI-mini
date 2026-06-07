@@ -97,7 +97,6 @@
 ## 第三方开源使用声明
 
 - [Kotlin Symbol Processing API](https://github.com/google/ksp)
-- [FreeReflection](https://github.com/tiann/FreeReflection)
 
 ## 许可证
 

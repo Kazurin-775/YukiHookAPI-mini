@@ -105,7 +105,6 @@ links).
 ## Third-Party Open Source Usage Statement
 
 - [Kotlin Symbol Processing API](https://github.com/google/ksp)
-- [FreeReflection](https://github.com/tiann/FreeReflection)
 
 ## License
 
