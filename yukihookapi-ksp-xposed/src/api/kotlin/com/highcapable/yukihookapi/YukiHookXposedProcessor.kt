@@ -38,7 +38,6 @@ import com.highcapable.yukihookapi.entity.GenerateData
 import com.highcapable.yukihookapi.factory.ClassName
 import com.highcapable.yukihookapi.factory.PackageName
 import com.highcapable.yukihookapi.factory.sources
-import com.highcapable.yukihookapi.generated.YukiHookAPIProperties
 import java.io.File
 import java.util.regex.Pattern
 
@@ -55,7 +54,7 @@ class YukiHookXposedProcessor : SymbolProcessorProvider {
     private companion object {
 
         /** 自动处理程序的 TAG */
-        private const val TAG = YukiHookAPIProperties.PROJECT_NAME
+        private const val TAG = "YukiHookAPI"
 
         /** 查找的注解名称 */
         private const val ANNOTATION_NAME = "com.highcapable.yukihookapi.annotation.xposed.InjectYukiHookWithXposed"

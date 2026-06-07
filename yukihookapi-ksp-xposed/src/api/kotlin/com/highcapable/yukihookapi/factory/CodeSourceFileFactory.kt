@@ -24,7 +24,6 @@
 package com.highcapable.yukihookapi.factory
 
 import com.highcapable.yukihookapi.entity.GenerateData
-import com.highcapable.yukihookapi.generated.YukiHookAPIProperties
 import com.highcapable.yukihookapi.utils.SymbolConverterTool
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -119,7 +118,7 @@ private fun createCommentContent(currentClassTag: String) =
        *
        * Powered by YukiHookAPI (C) HighCapable 2019
        *
-       * Project URL: [${YukiHookAPIProperties.PROJECT_NAME}](${YukiHookAPIProperties.PROJECT_URL})
+       * Project URL: [YukiHookAPI](https://github.com/HighCapable/YukiHookAPI)
        */
     """.trimIndent()
 
