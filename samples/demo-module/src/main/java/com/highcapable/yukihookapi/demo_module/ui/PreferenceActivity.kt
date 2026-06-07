@@ -26,13 +26,13 @@ import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.updatePadding
 import androidx.fragment.app.commit
+import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import com.highcapable.betterandroid.ui.extension.component.base.toPx
 import com.highcapable.betterandroid.ui.extension.component.fragmentManager
 import com.highcapable.yukihookapi.YukiHookAPI
 import com.highcapable.yukihookapi.demo_module.R
 import com.highcapable.yukihookapi.demo_module.ui.base.BaseActivity
-import com.highcapable.yukihookapi.hook.xposed.prefs.ui.ModulePreferenceFragment
 
 class PreferenceActivity : BaseActivity() {
 
@@ -58,9 +58,9 @@ class PreferenceActivity : BaseActivity() {
         return true
     }
 
-    class SettingsFragment : ModulePreferenceFragment() {
+    class SettingsFragment : PreferenceFragmentCompat() {
 
-        override fun onCreatePreferencesInModuleApp(savedInstanceState: Bundle?, rootKey: String?) {
+        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.settings_preferences, rootKey)
             findPreference<SwitchPreference>("show_dialog_when_demo_app_opend")?.isEnabled = YukiHookAPI.Status.isXposedEnvironment.not()
         }
