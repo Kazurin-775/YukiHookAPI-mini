@@ -38,8 +38,6 @@ dependencies {
     implementation(libs.betterandroid.ui.extension)
     implementation(libs.betterandroid.system.extension)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.preference.ktx)
 }
 
 mavenPublishing {

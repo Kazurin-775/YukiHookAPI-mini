@@ -74,6 +74,7 @@ internal object IActivityManagerProxyCaller {
                 fun String.verify() = if (AppParasitics.hostApplication?.classLoader?.hasClass(this) == true) this else null
                 setClassName(component.packageName, component.className.toClassOrNull()?.runCatching {
                     when {
+                        // this extends classOf<ModuleAppCompatActivity>() -> buildOf<ModuleAppCompatActivity>()?.proxyClassName?.verify()
                         this isSubclassOf ModuleActivity::class ->
                             createInstanceAsTypeOrNull<ModuleActivity>()?.proxyClassName?.verify()
                         else -> null
